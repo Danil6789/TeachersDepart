@@ -1,0 +1,69 @@
+﻿@using TeachersDepart.ViewModels
+@model List<TeacherViewModel>
+@{
+    ViewData["Title"] = "Преподаватели";
+}
+<div class="container data">
+    <div class="text-center">
+        <h1>Преподаватели</h1>
+        <p>
+            <a asp-action="Create">Добавить нового преподавателя</a>
+        </p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        Номер паспорта преподавателя
+                    </th>
+                    <th>
+                        Должность
+                    </th>
+                    <th>
+                        ФИО
+                    </th>
+                    <th>
+                        Дата рождения
+                    </th>
+                    <th>
+                        Учёное звание
+                    </th>
+                    <th>
+                        Учёная степень
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+
+                    <tr>
+                        <td>
+                            @item.TeacherPassportNumber
+                        </td>
+                        <td>
+                            @item.PositionName
+                        </td>
+                        <td>
+                            @item.FullName
+                        </td>
+                        <td>
+                            @item.BirthDate
+                        </td>
+                        <td>
+                            @item.AcademicTitleName
+                        </td>
+                        <td>
+                            @item.AcademicDegreeName
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.TeacherPassportNumber">Изменить</a>
+                            <a asp-action="Details" asp-route-id="@item.TeacherPassportNumber">Подробнее</a>
+                            <a asp-action="Delete" method="delete" asp-route-id="@item.TeacherPassportNumber">Удалить</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

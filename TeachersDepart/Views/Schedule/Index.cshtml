@@ -1,0 +1,55 @@
+﻿@using TeachersDepart.ViewModels
+
+@model List<TeachersGroupDisciplineViewModel>
+@{
+    ViewData["Title"] = "Расписание";
+}
+<div class="container data data-schedule">
+    <div class="text-center">
+        <h1>Расписание</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        ФИО преподавателя
+                    </th>
+                    <th>
+                        Предмет
+                    </th>
+                    <th>
+                        Вид занятий
+                    </th>
+                    <th>
+                        Номер группы
+                    </th>
+                    <th>
+                        Номер семестра
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @item.FullName
+                        </td>
+                        <td>
+                            @item.CourseName
+                        </td>
+                        <td>
+                            @item.ClassType
+                        </td>
+                        <td>
+                            @item.GroupNumber
+                        </td>
+                        <td>
+                            @item.SemesterNumber
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+</div>

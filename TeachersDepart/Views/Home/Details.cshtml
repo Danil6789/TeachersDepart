@@ -1,0 +1,24 @@
+﻿@using TeachersDepart.ViewModels
+@model TeacherViewModel
+
+<h1 class="text-center">Досье</h1>
+<div class="container data">
+    <div class="user-div">
+        <img class="user-img" src="/img/User.png" alt="Преподаватель">
+    </div>
+    <div class="person">
+        <span><b>Имя:</b> @ViewBag.Name</span>
+        <span><b>Фамилия:</b> @ViewBag.Family</span>
+        <span><b>Отчество:</b> @ViewBag.SecondName</span>
+        <span><b>Возраст:</b> @ViewBag.Age</span>
+        <span><b>Профессия:</b> @Model.PositionName</span>
+    </div>
+</div>
+
+<div class="container description">
+    <div class="text">
+        <p>Описание...</p>
+    </div>
+</div>
+
+</div>

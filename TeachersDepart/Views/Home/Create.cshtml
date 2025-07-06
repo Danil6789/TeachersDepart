@@ -1,0 +1,55 @@
+﻿@using TeachersDepart.ViewModels
+@model TeacherViewModel
+
+<h2>Добавление преподавателя</h2>
+<div class="container data">
+    <form asp-action="create" asp-controller="home" method="post">
+        <p>
+            <label>Номер пасспорта преподавателя</label><br />
+            <input type="number" asp-for="TeacherPassportNumber" />
+        </p>
+        <p>
+            <label>ФИО</label><br />
+            <input type="text" asp-for="FullName" />
+        </p>
+        <p>
+            <label>Должность</label><br />
+            <select asp-for="PositionName">
+                <option value="Заведующий кафедры">Заведующий кафедры</option>
+                <option value="Заместитель заведующей кафедры">Заместитель заведующей кафедры</option>
+                <option value="Преподаватель">Преподаватель</option>
+                <option value="Лаборант">Лаборант</option>
+                <option value="Младший сотрудник кафедры">Младший сотрудник кафедры</option>
+                <option value="Заместитель преподавателя">Заместитель преподавателя</option>
+                <option value="Помощник преподавателя">Помощник преподавателя</option>
+            </select>
+        </p>
+        <p>
+            <label asp-for="BirthDate">Дата рождения</label><br />
+            <input type="date" asp-for="BirthDate" />
+        </p>
+        <p>
+            <label>Учёное звание</label><br />
+            <select asp-for="AcademicTitleName">
+                <option value="Академик">Академик</option>
+                <option value="Ассистент">Ассистент</option>
+                <option value="Главный учёный">Главный учёный</option>
+                <option value="Доцент">Доцент</option>
+                <option value="Профессор">Профессор</option>
+                <option value="Учёный">Учёный</option>
+                <option value="Член-корреспондент">Член-корреспондент</option>
+            </select>
+        </p>
+        <p>
+            <label>Учёная степень</label><br />
+            <select asp-for="AcademicDegreeName">
+                <option value="к.т.н.">к.т.н.</option>
+                <option value="д.т.н.">д.т.н.</option>
+                <option value="к.ф.-м.н.">к.ф.-м.н.</option>
+                <option value="д.ф-м.н.">д.ф-м.н.</option>
+                <option value="к.х.н.">к.х.н.</option>
+            </select>
+        </p>
+        <button class="btn-primary" type="submit">Добавить</button>
+    </form>
+</div>

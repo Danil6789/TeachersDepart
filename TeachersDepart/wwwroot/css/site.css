@@ -1,0 +1,99 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  background-color: lightgray;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    background-color: orange;
+    display: flex;
+}
+.nav-menu {
+    font-size: 25px;
+
+}
+
+.nav-div li a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-div ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.user-img {
+    width: 200px;
+    height: 200px;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.user-div {
+    display: flex;
+    justify-content: center;
+}
+
+.data {
+    background-color: white;
+    display: flex;
+    padding: 50px;
+    margin-bottom: 100px;
+    border-radius: 100px;
+}
+.data-schedule{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.person {
+    margin-left: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.person span {
+    display: block;
+    font-size: 30px;
+}
+
+.description {
+    background-color: white;
+    display: flex;
+    height: 600px;
+    margin-bottom: 100px;
+    border-radius: 100px;
+    padding: 50px;
+}
+
+.text {
+    font-size: 20px;
+}
